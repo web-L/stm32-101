@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 int main() {
 
@@ -22,5 +23,40 @@ int main() {
   char string[] = "Hello, World!"; // 字符串类型
   printf("字符串类型: %s\n", string);
   
+  bool isTrue = true;
+  printf("布尔类型: %d\n", isTrue);
+
+  // 枚举类型
+  enum Color {
+    RED,
+    GREEN,
+    BLUE
+  };
+
+  enum Color color = GREEN;
+  printf("枚举类型: %d\n", color);
+
+  // 结构体类型
+  struct Person {
+    char name[50];
+    int age;
+  };
+
+  struct Person person = {"张三", 20};
+  printf("结构体类型: %s, %d\n", person.name, person.age);
+
+  // 联合类型
+  union Data {
+    int i;
+    double f;
+  };
+
+  union Data data;
+  data.i = 10;
+  printf("联合类型: %d\n", data.i);
+  data.f = 3.14;
+  printf("联合类型: %f\n", data.f);
+
+  return 0;
 }
 
